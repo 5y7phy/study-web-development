@@ -1,46 +1,35 @@
 <!DOCTYPE html>
-<html>
+<html lang="ja">
 <head>
-  <title>かわいい動物の写真</title>
-  <link rel="stylesheet" href="style.css">
-  <style>
-    body {
-      text-align: center;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <title>新しい投稿</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>かわいい動物の写真</h1>
-  <h1>犬</h1>
-  <img src="/Users/yuga/Desktop/授業/images/dog1.jpeg" alt="MILKY" style="width: 800px; height: auto;">
-</body>
-<body>
-  <img src="/Users/yuga/Desktop/授業/images/8BD8D322-A506-476F-8E75-BCACA0F12719.JPG" alt="MILKY" style="width: 800px; height: auto;">
-</body>
-<body>
-  <img src="/Users/yuga/Desktop/授業/images/A540E829-35FD-4960-9E65-74CCC42A0A58.JPG" alt="MILKY" style="width: 800px; height: auto;">
-</body>
-<body>
-  <img src="/Users/yuga/Desktop/授業/images/AF441A46-054A-4E69-BCA5-268C162B9BEA.JPG" alt="MILKY" style="width: 800px; height: auto;">
-</body>
-<body>
-  <h1>猫</h1>
-  <img src="/Users/yuga/Desktop/授業/images/8d1bd495f57484404d013b1ee163e79a.jpg" alt="サーバルキャット" style="width: 800px; height: auto;">
-</body>
-<body>
-  <img src="/Users/yuga/Desktop/授業/images/Piason.jpeg" alt="Piason唯" style="width: 800px; height: auto;">
-</body>
-<body>
-  <img src="/Users/yuga/Desktop/授業/images/get.JPEG" alt="camera" style="width: 800px; height: auto;">
-</body>
-<body>
-  <h1>狐</h1>
-  <img src="/Users/yuga/Desktop/授業/images/IMG_1122.jpg" alt="狐" style="width: 800px; height: auto;">
-</body>
-<body>
-  <img src="/Users/yuga/Desktop/授業/images/IMG_1121.jpg" alt="狐" style="width: 800px; height: auto;">
-</body>
-<body>
-  <img src="/Users/yuga/Desktop/授業/images/IMG_1120.jpg" alt="狐" style="width: 800px; height: auto;">
+
+    <header>
+        <h1>写真ブログ</h1>
+        <a href="posts.php">投稿一覧へ</a>
+    </header>
+
+    <main>
+        <h2>新しい投稿を作成</h2>
+        <form action="upload.php" method="POST" enctype="multipart/form-data">
+            <label for="name">タイトル:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="content">本文:</label>
+            <textarea id="content" name="content" required></textarea>
+
+            <label for="image">写真を選択:</label>
+            <input type="file" id="image" name="image" accept="image/*" required>
+
+            <label for="tags">タグ (複数ある場合はカンマで区切る):</label>
+            <input type="text" id="tags" name="tags">
+
+            <button type="submit">投稿する</button>
+        </form>
+    </main>
+
 </body>
 </html>
